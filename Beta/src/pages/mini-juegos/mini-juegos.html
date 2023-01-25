@@ -1,0 +1,42 @@
+<link href="assets/css/juegos.css" rel="stylesheet">
+<ion-header>
+  <ion-navbar color="darkblue">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>MiniJuegos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>    
+  <ion-list>
+    <ion-card *ngFor = "let minijuego of minijuegos">
+      <img [src]= "minijuego.imagen"/>
+  
+      <ion-card-content>
+        <ion-card-title>
+          {{minijuego.titulo}}
+        </ion-card-title>
+        <p>
+          {{minijuego.descripcion}}
+        </p>
+       
+        
+      </ion-card-content>
+  
+      <ion-row no-padding>
+        <ion-col>
+          <button ion-button clear small color="ligthblue" icon-start>
+            <ion-icon name="game-controller-b"></ion-icon>
+            <a href={{minijuego.link}}>Jugar</a>
+          </button>
+          <!--<button ion-button clear small color="ligthblue" icon-start
+                  (tap) = "gotoModal(minijuego)">
+            <ion-icon name="game-controller-b"></ion-icon>
+            Modal
+          </button>-->
+        </ion-col>        
+      </ion-row>   
+    </ion-card>    
+  </ion-list> 
+</ion-content>

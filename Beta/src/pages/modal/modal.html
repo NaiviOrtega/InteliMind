@@ -1,0 +1,27 @@
+<!--
+  Generated template for the ModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="darkblue">
+    <ion-title>modal</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <img [src]="objeto.imagen"/>
+  <h1>
+    {{objeto.titulo}}
+  </h1>
+  <p>
+    {{objeto.descripcion}}
+  </p>
+  <button ion-button
+          block
+          color="danger"
+          (tap) = exit()>
+    Regresar
+  </button>
+</ion-content>

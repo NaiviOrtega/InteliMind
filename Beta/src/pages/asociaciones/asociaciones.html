@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar color="darkblue">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Asociaciones</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-item-group *ngFor = "let asociacion of asociaciones">
+      <ion-item-divider color="light"> <h2> <b> {{asociacion.ciudad}} </b> </h2> </ion-item-divider>
+      <ion-item text-wrap>        
+        <ion-thumbnail item-end>      
+          <img [src]="asociacion.imagen"/>      
+        </ion-thumbnail>  
+        <h2 id="titulo"> <i> {{asociacion.titulo}} </i> </h2> 
+        <h3> Dirección </h3>
+        <p id="direccion">        
+          {{asociacion.direccion}}
+        </p> 
+        <h3> Telefono </h3>
+        <p>        
+          {{asociacion.telefono}}
+        </p> 
+      </ion-item>
+    </ion-item-group>
+  </ion-content>

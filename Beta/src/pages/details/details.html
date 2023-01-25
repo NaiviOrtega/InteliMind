@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="darkblue">
+    <ion-title>Agregar Familiar</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <h4 style="text-align: center;"> Ingrese los datos correspondientes: </h4>
+        <ion-list>
+          <ion-item>
+            <ion-label floating> Nombre: </ion-label>
+            <ion-input type="text" [(ngModel)]="name"></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label floating> Fecha de Nacimiento: </ion-label>
+            <ion-input type="date" values="" [(ngModel)]="datebirth"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label floating> Dirección: </ion-label>
+            <ion-input type="text" values="" [(ngModel)]="address"></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label floating> Teléfono: </ion-label>
+            <ion-input type="number" values="" [(ngModel)]="phone"></ion-input>
+          </ion-item>           
+        </ion-list>
+        <div padding>
+          <button ion-button color="ligthblue" block (tap)="insert(name,datebirth,address,phone)"
+            (tap)="process()" (tap)="doAlert()" (tap)="gotoTime">
+            Aceptar
+          </button>
+        </div>
+    </ion-list>
+</ion-content>

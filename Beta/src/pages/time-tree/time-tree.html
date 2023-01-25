@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="darkblue">
+    <ion-title>Crear Árbol Genealógico</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-fab center middle>
+    <button ion-fab color="yellow"><ion-icon name="ios-contact"></ion-icon></button>
+    <ion-fab-list side="top">
+      Padres
+      <button ion-fab color="light" (tap)="gotoAdd()"><ion-icon name="ios-add-circle-outline"></ion-icon></button>
+    </ion-fab-list>
+    <ion-fab-list side="bottom">
+      Hijos
+      <button ion-fab color="light" (tap)="gotoAdd()"><ion-icon name="ios-add-circle-outline"></ion-icon></button>
+    </ion-fab-list>
+    <ion-fab-list side="left">
+      Pareja
+      <button ion-fab color="light" (tap)="gotoAdd()"><ion-icon name="ios-add-circle-outline"></ion-icon></button>
+    </ion-fab-list>
+    <ion-fab-list side="right">
+      Hermanos
+      <button ion-fab color="light" (tap)="gotoAdd()"><ion-icon name="ios-add-circle-outline"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
